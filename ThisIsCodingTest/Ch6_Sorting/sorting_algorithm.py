@@ -30,13 +30,16 @@ def quick_sort(array: list, start, end):
     right = end
 
     while left <= right:
+        # 왼쪽에서 출발하여 pivot보다 큰 수 찾기
         while left <= end and array[left] <= array[pivot]:
             left += 1
+        # 오른쪽에서 출발하여 pivot보다 작은 수 찾기
         while right > start and array[right] >= array[pivot]:
             right -= 1
 
         if left <= right:
             array[left], array[right] = array[right], array[left]
+        # left가 right를 지나쳤을 경우, right와 pivot 교체
         else:
             array[pivot], array[right] = array[right], array[pivot]
 
