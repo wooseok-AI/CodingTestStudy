@@ -21,3 +21,10 @@ SW Expert Academy 모의 SW 역량테스트 풀이
 ~~~bash
 ../ThisisCodingTest/챕터명(문제유형)/예제번호.py
 ~~~
+
+## 코드트리 기출
+
+코드트리 삼성 기출 풀이
+~~~bash
+../CodeTree/문제이름.py
+~~~
