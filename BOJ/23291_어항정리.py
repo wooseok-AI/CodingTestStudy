@@ -193,4 +193,3 @@ if __name__ == "__main__":
         bowl = flatten(arranged_bowl2)
         # print("flatten : ", bowl)
         diff = max(bowl) - min(bowl)
-        # print("\n")
