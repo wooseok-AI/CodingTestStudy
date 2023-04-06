@@ -16,8 +16,6 @@ def dfs(i, j):
         dfs(i, j - 1)
         return 0
 
-
-
 count = 0
 
 for r in range(N):
