@@ -29,8 +29,7 @@ def dfs_solution(day, profit):
 
 maximum_profit = 0
 
-for day in range(n):
-    dfs_solution(day, 0)
+dfs_solution(0, 0)
 
 print(maximum_profit)
 
