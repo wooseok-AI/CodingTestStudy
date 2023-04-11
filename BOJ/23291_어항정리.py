@@ -51,15 +51,6 @@ def find_bowl(grid):
         array.append(last_line)
         return grid, array, start_col, rest_len
 
-    # # 회전할 어레이의 길이가 남은 부분보다 길면 안됨.
-    # rest_len = len([x for x in grid[-1] if x is not None])
-    # if rest_len < len(array):
-    #     rest_len = None
-    #     return temp_grid, array, start_col, rest_len
-    # else:
-    #     return grid, array, start_col, rest_len
-
-
 def rotate_array(array: list):
     n_row = len(array)
     n_col = len(array[0])
@@ -78,7 +69,7 @@ def add_bowl(grid, array, start_col):
     for new_row in range(len(new_bowl)):
         for new_col in range(len(new_bowl[0])):
             grid[start_row+new_row][start_col+len(array[0])+new_col] = new_bowl[new_row][new_col]
-    # print(grid)
+
     bowl = []
     for x in range(start_row, len(grid)):
         row = []
@@ -153,9 +144,6 @@ if __name__ == "__main__":
     T = 0
     diff = 999
     while True:
-        # if T == 2:
-        #     print(bowl)
-        #     break
         if diff <= K:
             print(T)
             break
@@ -177,19 +165,15 @@ if __name__ == "__main__":
                 else:
                     grid, bowl = add_bowl(grid, array, start_col)
             trial += 1
-        # print(bowl)
+
         arranged_bowl = arrange_fish(bowl)
-        # print("arranged :", arranged_bowl)
 
         flat_bowl = flatten(arranged_bowl)
-        # print("flatten : ", flat_bowl)
 
         rotate_bowl = rotate_twice(flat_bowl)
-        # print("rotate : ", rotate_bowl)
 
         arranged_bowl2 = arrange_fish(rotate_bowl)
-        # print("arranged :", arranged_bowl2)
 
         bowl = flatten(arranged_bowl2)
-        # print("flatten : ", bowl)
+
         diff = max(bowl) - min(bowl)
