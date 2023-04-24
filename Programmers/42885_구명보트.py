@@ -1,6 +1,6 @@
 """
 Author :  Wooseok Jung
-Problem_ling : https://school.programmers.co.kr/learn/courses/30/lessons/42885
+Problem_linK : https://school.programmers.co.kr/learn/courses/30/lessons/42885
 """
 
 
