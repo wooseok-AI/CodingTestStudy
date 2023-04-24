@@ -23,12 +23,3 @@ def solution(order):
                 break
 
     return count
-
-
-
-
-
-
-
-
-
