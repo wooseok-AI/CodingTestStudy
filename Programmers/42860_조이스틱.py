@@ -58,5 +58,4 @@ def solution(name):
     min_dist = float("inf")
     for path in log:
         min_dist = min(dist(path, len(name)), min_dist)
-    print(count, min_dist)
     return count + min_dist
